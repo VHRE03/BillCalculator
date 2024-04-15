@@ -61,6 +61,8 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            //Pack completo de iconos
+            api(compose.materialIconsExtended)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -99,6 +101,12 @@ android {
     }
     dependencies {
         debugImplementation(libs.compose.ui.tooling)
+    }
+    buildFeatures{
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.10"
     }
 }
 
